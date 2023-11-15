@@ -76,7 +76,7 @@ const SingleProduct = () => {
               <img
                 alt="ecommerce"
                 className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
-                src="https://www.whitmorerarebooks.com/pictures/medium/2465.jpg"
+                src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
               />
               <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">
@@ -94,7 +94,7 @@ const SingleProduct = () => {
                 <p className="leading-relaxed">
                   {singleProduct?.productDescription}
                 </p>
-                {/* <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+                <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                   <div className="flex">
                     <span className="mr-3">Color</span>
                     <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
@@ -125,7 +125,7 @@ const SingleProduct = () => {
                       </span>
                     </div>
                   </div>
-                </div> */}
+                </div>
                 <div className="flex mt-6">
                   <span className="title-font font-medium text-2xl text-gray-900">
                     ${singleProduct?.productPrice}

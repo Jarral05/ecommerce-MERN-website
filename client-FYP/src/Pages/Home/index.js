@@ -122,9 +122,8 @@ const Home = () => {
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Products
+            Latest Products
           </h2>
-          F
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {productlist.map((product) => (
               <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
@@ -134,7 +133,7 @@ const Home = () => {
                 >
                   <img
                     class="object-cover"
-                    src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
                     alt="product image"
                   />
                   {/* <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
