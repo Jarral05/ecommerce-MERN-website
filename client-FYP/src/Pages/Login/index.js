@@ -96,7 +96,7 @@ const Login = () => {
         <div className="flex items-center gap-[100px]">
           <div>
             <dotlottie-player
-              src="https://lottie.host/c267c477-4047-4e31-965e-1eb05fcf3593/7UFnaU9TAo.json"
+              src="https://lottie.host/4b2c8fd5-a833-4474-850e-912d32b0f471/Ttmh874MKZ.json"
               background="transparent"
               speed="1"
               style={{ width: "400px", height: "400px" }}

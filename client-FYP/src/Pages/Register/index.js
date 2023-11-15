@@ -31,7 +31,7 @@ const Register = () => {
       <div className="flex items-center gap-[100px]">
         <div>
           <dotlottie-player
-            src="https://lottie.host/a6b9814d-efe9-478f-af25-1a688e12d4c6/dFzsxjeRlV.json"
+            src="https://lottie.host/ac9695f2-90d8-4c74-a5a2-a8f02f31f3f5/ZsCmoTUFv5.json"
             background="transparent"
             speed="1"
             style={{ width: "400px", height: "400px" }}

@@ -70,7 +70,7 @@ const ForgetPassword = ({ userEmail }) => {
           <div className="flex sm:flex-row xs:flex-col items-center gap-[100px]">
             <div>
               <dotlottie-player
-                src="https://lottie.host/df4a82f5-5f81-4645-b35f-57949168f2d2/jRTeZ1xhEm.json"
+                src="https://lottie.host/ef11f132-200a-47b7-969a-ad9c59321065/5hBrRuLgju.json"
                 background="transparent"
                 speed="1"
                 sstyle={{ width: "400px", height: "400px" }}
@@ -143,7 +143,7 @@ const ForgetPassword = ({ userEmail }) => {
           <div className="flex items-center gap-[100px]">
             <div>
               <dotlottie-player
-                src="https://lottie.host/df4a82f5-5f81-4645-b35f-57949168f2d2/jRTeZ1xhEm.json"
+                src="https://lottie.host/ef11f132-200a-47b7-969a-ad9c59321065/5hBrRuLgju.json"
                 background="transparent"
                 speed="1"
                 sstyle={{ width: "400px", height: "400px" }}
