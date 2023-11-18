@@ -8,6 +8,7 @@ import orderRoute from "./routes/orderRoute.js";
 import cors from "cors";
 import cloudinaryRoute from "./routes/cloudinaryRoute.js";
 import cloudinary from "cloudinary";
+import connectDB from "./config/dbConfig.js";
 const app = express();
 
 app.use(bodyParser.json());
@@ -18,13 +19,13 @@ app.use("/api/cart", cartRoute);
 app.use("/api/order", orderRoute);
 
 // cloudinary route
-app.use("/api/cloudinary", cloudinaryRoute);
+// app.use("/api/cloudinary", cloudinaryRoute);
 
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_API_KEY,
-  api_secret: process.env.CLOUD_SECRET,
-});
+// cloudinary.config({
+//   cloud_name: process.env.CLOUD_NAME,
+//   api_key: process.env.CLOUD_API_KEY,
+//   api_secret: process.env.CLOUD_SECRET,
+// });
 
 const PORT = process.env.PORT || 5000;
 
