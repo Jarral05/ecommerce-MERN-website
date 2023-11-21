@@ -1,8 +1,8 @@
 import { Carousel } from "antd";
 import React, { useEffect, useState } from "react";
-import slider1 from "../../assets/images/slider1.jpg";
-import slider2 from "../../assets/images/slider2.jpg";
-import slider3 from "../../assets/images/slider3.jpg";
+import slider1 from "../../assets/images/image-1.jpg";
+import slider2 from "../../assets/images/image-2.jpg";
+import slider3 from "../../assets/images/image-3.jpg";
 import ProductList from "../../components/ProductList";
 import axios from "axios";
 import { useSelector } from "react-redux";
@@ -94,30 +94,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* Carousel */}
-      {/* <Carousel autoplay>
-        <div>
-          <img
-            style={{ width: "100%", height: "1000px" }}
-            src={slider2}
-            alt="Carousel 1"
-          />
-        </div>
-        <div>
-          <img
-            style={{ width: "100%", height: "1000px" }}
-            src={slider3}
-            alt="Carousel 1"
-          />
-        </div>
-        <div>
-          <img
-            style={{ width: "100%", height: "1000px" }}
-            src={slider1}
-            alt="Carousel 1"
-          />
-        </div>
-      </Carousel> */}
       {/* Product List */}
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -133,7 +109,7 @@ const Home = () => {
                 >
                   <img
                     class="object-cover"
-                    src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
+                    src="https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg"
                     alt="product image"
                   />
                   {/* <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">

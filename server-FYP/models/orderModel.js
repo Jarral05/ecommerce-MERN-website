@@ -21,7 +21,7 @@ const orderSchema = new schema(
           required: true,
         },
       },
-    ], // Array of order items
+    ],
     status: {
       type: String,
       default: "Pending",

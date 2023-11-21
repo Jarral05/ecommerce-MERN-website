@@ -42,8 +42,7 @@ const Register = () => {
         <div className=" mt-[50px] rounded ">
           <h1 className="font-medium text-3xl">Register</h1>
           <p className="text-gray-600 mt-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Dignissimos dolorem vel cupiditate laudantium dicta.
+            Register for free! Create your account for purchasing products.
           </p>
 
           <Form onFinish={onFinish} layout="vertical">
@@ -79,6 +78,12 @@ const Register = () => {
                 <Form.Item
                   label="Email"
                   name="userEmail"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your password!",
+                    },
+                  ]}
                   className="text-sm text-gray-700 block mb-1 font-medium"
                 >
                   <Input className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full" />
@@ -110,6 +115,12 @@ const Register = () => {
                 <Form.Item
                   label=" Password"
                   name="password"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your password!",
+                    },
+                  ]}
                   className="text-sm text-gray-700 block mb-1 font-medium"
                 >
                   <Input className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full" />

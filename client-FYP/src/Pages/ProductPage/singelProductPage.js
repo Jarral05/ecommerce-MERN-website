@@ -76,7 +76,7 @@ const SingleProduct = () => {
               <img
                 alt="ecommerce"
                 className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
-                src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
+                src="https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg"
               />
               <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">

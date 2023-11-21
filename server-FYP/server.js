@@ -12,14 +12,6 @@ import connectDB from "./config/dbConfig.js";
 const app = express();
 
 app.use(bodyParser.json());
-
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
-
 app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
 app.use("/api/cart", cartRoute);

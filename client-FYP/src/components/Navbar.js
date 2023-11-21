@@ -17,15 +17,6 @@ const Navbar = () => {
       link: "/",
       title: "Home",
     },
-
-    {
-      link: "product",
-      title: "Product",
-    },
-    {
-      link: "shop",
-      title: "Shop",
-    },
   ];
   const logOut = () => {
     localStorage.clear();
