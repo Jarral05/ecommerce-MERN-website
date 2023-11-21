@@ -5,6 +5,7 @@ import axios from "axios";
 import { Card } from "antd";
 import Meta from "antd/es/card/Meta";
 import { BiArrowBack } from "react-icons/bi";
+import apiService from "../../utils/apiService.js";
 
 const SingleProductScreen = () => {
   const [product, setProduct] = useState(null);
@@ -14,7 +15,7 @@ const SingleProductScreen = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get(`/api/product/get-single-product/${id}`);
+      const response = await apiService.get(`/api/product/get-single-product/${id}`);
       if (response.data.success) {
         setProduct(response.data.data);
       }

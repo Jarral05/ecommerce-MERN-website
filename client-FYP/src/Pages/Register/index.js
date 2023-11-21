@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { hideLoading, showLoading } from "../../redux/loaderSlice";
+import apiService from "../../utils/apiService.js";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Register = () => {
   const onFinish = async (data) => {
     try {
       dispatch(showLoading());
-      const response = await axios.post("/api/user/create-user", data);
+      const response = await apiService.post("/api/user/create-user", data);
       dispatch(hideLoading());
       if (response.data.success) {
         toast.success(response.data.message);

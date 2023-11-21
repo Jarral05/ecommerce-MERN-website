@@ -8,6 +8,7 @@ import { hideLoading, showLoading } from "../../redux/loaderSlice";
 import TextArea from "antd/es/input/TextArea";
 import { useNavigate, useParams } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
+import apiService from "../../utils/apiService.js";
 
 import { setProduct } from "../../redux/productSlice";
 
@@ -20,7 +21,7 @@ const UpdateSingleProduct = () => {
   const onFinish = async (data) => {
     try {
       dispatch(showLoading());
-      const response = await axios.put(
+      const response = await apiService.put(
         `/api/product/update-product/${id}`,
         data
       );
@@ -38,7 +39,7 @@ const UpdateSingleProduct = () => {
 
   const getSingleProduct = async () => {
     try {
-      const response = await axios.get(`/api/product/get-single-product/${id}`);
+      const response = await apiService.get(`/api/product/get-single-product/${id}`);
       if (response.data.success) {
         dispatch(setProduct(response.data.data));
       }

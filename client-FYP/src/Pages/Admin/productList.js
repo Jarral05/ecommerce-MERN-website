@@ -6,13 +6,14 @@ import { GrFormView } from "react-icons/gr";
 import { MdOutlineDeleteSweep } from "react-icons/md";
 import { FiEdit3 } from "react-icons/fi";
 import { toast } from "react-hot-toast";
+import apiService from "../../utils/apiService.js";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   const getAllProducts = async () => {
     try {
-      const response = await axios.get("/api/product/get-all-product");
+      const response = await apiService.get("/api/product/get-all-product");
       if (response.data.success) {
         setProducts(response.data.data);
       }
@@ -21,7 +22,7 @@ const ProductList = () => {
 
   const handleDelete = async (productId) => {
     try {
-      const response = await axios.delete(
+      const response = await apiService.delete(
         `/api/product/delete-product/${productId}`
       );
       if (response.data.success) {
@@ -34,7 +35,7 @@ const ProductList = () => {
   };
   const handleView = async (productId) => {
     try {
-      const response = await axios.get(
+      const response = await apiService.get(
         `/api/product/get-single-product/${productId}`
       );
       if (response.data.success) {
@@ -45,7 +46,7 @@ const ProductList = () => {
 
   const handleUpdate = async (productId) => {
     try {
-      const response = await axios.put(
+      const response = await apiService.put(
         `/api/product/update-product/${productId}`
       );
       if (response.data.success) {

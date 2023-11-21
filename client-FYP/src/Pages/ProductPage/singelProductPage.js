@@ -6,6 +6,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import Rating from "../../components/Rating";
+import apiService from "../../utils/apiService.js";
 
 const SingleProduct = () => {
   const { user } = useSelector((state) => state.user);
@@ -16,7 +17,7 @@ const SingleProduct = () => {
 
   const getSingleProductDate = async () => {
     try {
-      const response = await axios.get(`/api/product/get-single-product/${id}`);
+      const response = await apiService.get(`/api/product/get-single-product/${id}`);
       if (response.data.success) {
         setSingleProduct(response.data.data);
       }
@@ -34,7 +35,7 @@ const SingleProduct = () => {
         productId: product._id,
         quantity: 1,
       };
-      const response = await axios.post(
+      const response = await apiService.post(
         "/api/cart/create-cart",
         {
           userId,

@@ -5,6 +5,7 @@ import axios from "axios";
 import { Card } from "antd";
 import Meta from "antd/es/card/Meta";
 import { BiArrowBack } from "react-icons/bi";
+import apiService from "../../utils/apiService.js";
 
 const SingleUserScreen = () => {
   const [user, setUser] = useState(null);
@@ -14,7 +15,7 @@ const SingleUserScreen = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get(`/api/user/get-single-user/${id}`);
+      const response = await apiService.get(`/api/user/get-single-user/${id}`);
       if (response.data.success) {
         setUser(response.data.data);
       }

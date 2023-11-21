@@ -1,30 +1,38 @@
 import bodyParser from "body-parser";
 import express from "express";
-import dbConfig from "./config/dbConfig.js";
 import userRoute from "./routes/userRoute.js";
 import productRoute from "./routes/productRoute.js";
 import cartRoute from "./routes/cartRoute.js";
 import orderRoute from "./routes/orderRoute.js";
 import cors from "cors";
-import cloudinaryRoute from "./routes/cloudinaryRoute.js";
-import cloudinary from "cloudinary";
-import connectDB from "./config/dbConfig.js";
 const app = express();
 
 app.use(bodyParser.json());
+<<<<<<< HEAD
+=======
+
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "https://phenomenal-buttercream-167cdb.netlify.app");
+//   res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+//   next();
+// })
+
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'https://phenomenal-buttercream-167cdb.netlify.app');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+//   next();
+// });
+
+>>>>>>> 0968a67b78701fd651fcb44e31ef87fc40448d98
 app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
 app.use("/api/cart", cartRoute);
 app.use("/api/order", orderRoute);
 
-// cloudinary route
-// app.use("/api/cloudinary", cloudinaryRoute);
-
-// cloudinary.config({
-//   cloud_name: process.env.CLOUD_NAME,
-//   api_key: process.env.CLOUD_API_KEY,
-//   api_secret: process.env.CLOUD_SECRET,
-// });
 
 const PORT = process.env.PORT || 5000;
 
