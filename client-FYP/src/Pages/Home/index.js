@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 import Rating from "../../components/Rating";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import apiService from "../../utils/apiService.js";
 
 const Home = () => {
   const { user } = useSelector((state) => state.user);
@@ -27,7 +26,7 @@ const Home = () => {
         productId: product._id,
         quantity: 1,
       };
-      const response = await apiService.post(
+      const response = await axios.post(
         "/api/cart/create-cart",
         {
           userId,
@@ -52,7 +51,7 @@ const Home = () => {
   };
   const getData = async () => {
     try {
-      const response = await apiService.post(
+      const response = await axios.post(
         "/api/user/get-user-info-by-id",
         {},
         {
@@ -68,7 +67,7 @@ const Home = () => {
 
   const getProducts = async () => {
     try {
-      const response = await apiService.get("/api/product/get-all-product");
+      const response = await axios.get("/api/product/get-all-product");
       if (response.data.success) {
         setProductList(response.data.data);
       }
@@ -77,7 +76,7 @@ const Home = () => {
 
   const handleView = async (productId) => {
     try {
-      const response = await apiService.get(
+      const response = await axios.get(
         `/api/product/get-single-product/${productId}`
       );
       if (response.data.success) {

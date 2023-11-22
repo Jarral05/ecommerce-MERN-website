@@ -17,6 +17,11 @@ const Navbar = () => {
       link: "/",
       title: "Home",
     },
+
+    {
+      link: "shop",
+      title: "Shop",
+    },
   ];
   const logOut = () => {
     localStorage.clear();
@@ -26,9 +31,7 @@ const Navbar = () => {
   return (
     <Wrapper bgColor="primary">
       <nav className="w-full bg-primary flex py-6 justify-between items-center navbar">
-        <h1 className="text-3xl text-white">
-          <Link to="/">My Shop</Link>
-        </h1>
+        <h1 className="text-3xl text-white">Logo</h1>
 
         <ul className="list-none sm:flex hidden justify-end items-center flex-1">
           {navLinks.map((nav, index) => (

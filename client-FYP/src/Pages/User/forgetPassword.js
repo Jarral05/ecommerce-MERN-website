@@ -7,7 +7,6 @@ import { hideLoading, showLoading } from "../../redux/loaderSlice";
 import toast from "react-hot-toast";
 import { BiArrowBack } from "react-icons/bi";
 import Wrapper from "../../components/Wrapper";
-import apiService from "../../utils/apiService.js";
 
 const ForgetPassword = ({ userEmail }) => {
   const [isEmailSent, setIsEmailSent] = useState(false);
@@ -19,7 +18,7 @@ const ForgetPassword = ({ userEmail }) => {
     try {
       dispatch(showLoading());
 
-      const response = await apiService.post(
+      const response = await axios.post(
         "/api/user/forget-password",
 
         data,
@@ -46,7 +45,7 @@ const ForgetPassword = ({ userEmail }) => {
     try {
       dispatch(showLoading());
 
-      const response = await apiService.post("/api/user/verify-otp", data, {
+      const response = await axios.post("/api/user/verify-otp", data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

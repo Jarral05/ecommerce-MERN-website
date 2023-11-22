@@ -5,14 +5,13 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { GrFormView } from "react-icons/gr";
 import { MdOutlineDeleteSweep } from "react-icons/md";
-import apiService from "../../utils/apiService.js";
 
 const UserData = () => {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
   const handleDelete = async (userID) => {
     try {
-      const response = await apiService.delete(`/api/user/delete-user/${userID}`, {
+      const response = await axios.delete(`/api/user/delete-user/${userID}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -31,7 +30,7 @@ const UserData = () => {
 
   const handleView = async (userId) => {
     try {
-      const response = await apiService.get(`/api/user/get-single-user/${userId}`);
+      const response = await axios.get(`/api/user/get-single-user/${userId}`);
       console.log(response);
       if (response.data.success) {
         navigate(`/user/${userId}`);
@@ -43,7 +42,7 @@ const UserData = () => {
 
   const getAllUsers = async () => {
     try {
-      const response = await apiService.get("/api/user/get-all-user");
+      const response = await axios.get("/api/user/get-all-user");
       if (response.data.success) {
         setUsers(response.data.data);
       }

@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { hideLoading, showLoading } from "../../redux/loaderSlice";
 import toast from "react-hot-toast";
-import apiService from "../../utils/apiService.js";
 
 const UpdateProfile = () => {
   const { user } = useSelector((state) => state.user);
@@ -16,7 +15,7 @@ const UpdateProfile = () => {
     try {
       dispatch(showLoading());
 
-      const response = await apiService.put(
+      const response = await axios.put(
         "/api/user/update-user",
         {
           _id: user._id,

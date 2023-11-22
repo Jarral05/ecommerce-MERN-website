@@ -6,14 +6,13 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { hideLoading, showLoading } from "../../redux/loaderSlice";
 import TextArea from "antd/es/input/TextArea";
-import apiService from "../../utils/apiService.js";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
   const onFinish = async (data) => {
     try {
       dispatch(showLoading());
-      const response = await apiService.post("/api/product/create-product", data);
+      const response = await axios.post("/api/product/create-product", data);
       dispatch(hideLoading());
       if (response.data.success) {
         toast.success(response.data.message);
